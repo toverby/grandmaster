@@ -35,7 +35,7 @@ function check_login($database, $email = '', $pass = '') {
 
 				// Retrieve the user_id and first_name for that email/password combination:
 						//$pass = sha1($pass);
-			$q = "SELECT lastname, firstname FROM to2446992_kv2_admin WHERE email='$e' AND pass='$pass'";		
+			$q = "SELECT lastname, firstname FROM to2446992_karate_admin WHERE email='$e' AND pass='$pass'";		
 			$r = @mysqli_query ($database, $q); // Run the query.
 
 	/*if (!mysqli_query($database,$q)){

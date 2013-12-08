@@ -1,9 +1,4 @@
 
-html, html a, html p,html li, html h1, html h2, html input{
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
-
 * {
 	
 	border:0;
@@ -11,6 +6,12 @@ html, html a, html p,html li, html h1, html h2, html input{
 	padding:0;
 
 }
+
+html, html a, html p,html li, html h1, html h2, html input{
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.004);
+}
+
 
 /* general */
 a {

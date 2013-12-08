@@ -11,7 +11,7 @@ $page_title = 'Current Students';
 require ('connector.php'); 
 		
 
-$q = "SELECT CONCAT(last_name,first_name, '','','') as name FROM  2446992_New_Customer";	
+$q = "SELECT CONCAT(last_name,first_name, '','','') as name FROM  to2446992_Karate_Contact_Table";	
 
 $r = @mysqli_query ($database, $q); 
 

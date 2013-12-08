@@ -28,6 +28,8 @@ if (isset($errors) && !empty($errors)) {
 				<p>Email Address: <input type="text" name="email" size="20" maxlength="60" /> </p>
 				<p>Password: <input type="password" name="pass" size="20" maxlength="75" /></p>
 				<p><input type="submit" name="submit" value="Login" /></p>
+				<h2><a href="index.php">Exit Page</a></h2>
+
 		</form>
 
 	</div>

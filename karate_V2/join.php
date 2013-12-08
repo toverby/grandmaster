@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 include ('header.html'); 
 
 $page_title = 'Application to join';?>
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		$LastName = $_POST["LastName"];
 		$FirstName = $_POST["FirstName"];
 		*/
-		if(mysqli_num_rows(mysqli_query ($database ,"SELECT LastName,FirstName FROM to2446992_kv2 WHERE LastName = '$ln' AND FirstName = '$fn' "))){
+		if(mysqli_num_rows(mysqli_query ($database ,"SELECT LastName,FirstName FROM to2446992_Karate_Student_App WHERE LastName = '$ln' AND FirstName = '$fn' "))){
 						//Code inside if block if userid is already there
 					$errors[]='The system says you already have an Application on file. Please call for help';
 					
@@ -129,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 						
 		
 
-	//$q = "INSERT INTO  to2446992_kv2 (RegDate,Photo,Salutation,FirstName,LastName,Birthdate,EmergencyContact,MobileNumber,PhoneNumber,ChildrenNames,Address,City,State,PostalCode,EmailAddress,SpouseName,Notes)VALUES (NOW(),'$sal','$img',$fn','$ln','$bd','$ec','$hp','$cn','$ads','$cty','$st','$zip','$e','$sn','$nt')";	
-	$q = "INSERT INTO to2446992_kv2(`RegDate`,`Photo`,`Salutation`,`FirstName`,`LastName`,`Birthdate`,`EmergencyContact`,`MobileNumber`,`PhoneNumber`,`ChildrenNames`,`Address`,`City`,`State`,`PostalCode`,`EmailAddress`,`SpouseName`,`Notes`)VALUES (NOW(),'$img','$sal','$fn','$ln','$bd','$ec','$mp','$hp','$cn','$ads','$cty','$st','$zip','$e','$sn','$nt')";														
+	//$q = "INSERT INTO  to2446992_Karate_Student_App (RegDate,Photo,Salutation,FirstName,LastName,Birthdate,EmergencyContact,MobileNumber,PhoneNumber,ChildrenNames,Address,City,State,PostalCode,EmailAddress,SpouseName,Notes)VALUES (NOW(),'$sal','$img',$fn','$ln','$bd','$ec','$hp','$cn','$ads','$cty','$st','$zip','$e','$sn','$nt')";	
+	$q = "INSERT INTO to2446992_Karate_Student_App(`RegDate`,`Photo`,`Salutation`,`FirstName`,`LastName`,`Birthdate`,`EmergencyContact`,`MobileNumber`,`PhoneNumber`,`ChildrenNames`,`Address`,`City`,`State`,`PostalCode`,`EmailAddress`,`SpouseName`,`Notes`)VALUES (NOW(),'$img','$sal','$fn','$ln','$bd','$ec','$mp','$hp','$cn','$ads','$cty','$st','$zip','$e','$sn','$nt')";														
 
 				$r = @mysqli_query ($database, $q);
 							
@@ -212,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 							
 			   	<p>Spouse Name(optional): <input type="text" name="SpouseName" size="20" maxlength="20" value="<?php if (isset($_POST['SpouseName'])) echo $_POST['SpouseName']; ?>"  /> </p>
 		    				
-			   	<p for="Photo">Upload a photo</label> <input type="file" name="Photo" value="<?php if (isset($_POST[	'Photo'])) echo $_POST['Photo']; ?>"  /></p>
+			   	<p for="Photo">Upload a photo</label> <input type="file" action="add_print.php" name="Photo" value="<?php if (isset($_POST[	'Photo'])) echo $_POST['Photo']; ?>"  /></p>
 		
 			<p>Please tell use more about yourself and/or child; such as health conditionals, prior experience or special needs<input type="text" name="Notes" size="1000" maxlength="1000" value="<?php if (isset($_POST['phone_number'])) echo $_POST['phone_number']; ?>"  /></p>
 
