@@ -19,11 +19,11 @@ if (isset($errors) && !empty($errors)) {
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+  <script type="text/javascript" charset="utf-8" src="js/login_win.js"></script>
 </head>
 <body>
 	<div id="wrapper">
-		<form id="Form" action="login_win.js" method="post" accept-charset='UTF-8'>
+		<form id="Form" action="login.php" method="post" accept-charset='UTF-8'>
 			<h1>Login</h1>
 				<p>Email Address: <input type="text" name="email" size="20" maxlength="60" /> </p>
 				<p>Password: <input type="text" id="clone" placeholder="Password"></p>
