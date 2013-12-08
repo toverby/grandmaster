@@ -23,12 +23,14 @@ if (isset($errors) && !empty($errors)) {
 </head>
 <body>
 	<div id="wrapper">
-		<form id="Form" action="login.php" method="post" accept-charset='UTF-8'>
+		<form id="Form" action="login_win.js" method="post" accept-charset='UTF-8'>
 			<h1>Login</h1>
 				<p>Email Address: <input type="text" name="email" size="20" maxlength="60" /> </p>
-				<p>Password: <input type="password" name="pass" size="20" maxlength="75" /></p>
+				<p>Password: <input type="text" id="clone" placeholder="Password"></p>
+				
+
 				<p><input type="submit" name="submit" value="Login" /></p>
-				<h2><a href="index.php">Exit Page</a></h2>
+				<h3><a href="index.php">Exit Page</a></h>
 
 		</form>
 
