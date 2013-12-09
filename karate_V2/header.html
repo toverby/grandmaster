@@ -12,8 +12,31 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
- 
-
+ <script type="text/javascript" charset="utf-8" src="login_win.js?v=42"></script>
+     
+      <script type="text/javascript">
+      <!--
+      function popup(url) 
+      {
+           var width  = 300;
+           var height = 200;
+           var left   = (screen.width  - width)/2;
+           var top    = (screen.height - height)/2;
+           var params = 'width='+width+', height='+height;
+           params += ', top='+top+', left='+left;
+           params += ', directories=no';
+           params += ', location=no';
+           params += ', menubar=no';
+           params += ', resizable=no';
+           params += ', scrollbars=no';
+           params += ', status=no';
+           params += ', toolbar=no';
+           newwin=window.open(url,'windowname5', params);
+           if (window.focus) {newwin.focus()}
+           return false;
+      }
+      // -->
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
 </head>
 
 <body>
@@ -25,17 +48,20 @@
 
     <div id="tabs">
       <ul>
-        <li><?php // Create a login/logout link:
+        <li>
+        <?php // Create a login/logout link:
+
           if (isset($_SESSION['firstname'])) {
-            echo '<a href="logout.php">Logout</a>';
-          } else {
-            echo '<a href">Login</a>';
-          }
+                echo '<a href="logout.php">Logout</a>';
+              } else {
+                echo '<a href= "javascript:popup("login.php?v=42")">Login</a>';
+                
+              }
           ?></li>
         <li><a href="new_cust.php">Get more information</a></li>
         <li><a href="instructor.php">Our Instructors</a></li>
         <li><a href="join.php">Join Now!</a></li>
-         <li><a href="Awards.php">Awards and Honors</a></li>
+        <li><a href="Awards.php">Awards and Honors</a></li>
          
       </ul> 
     </div>

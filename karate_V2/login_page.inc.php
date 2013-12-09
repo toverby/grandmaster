@@ -19,7 +19,8 @@ if (isset($errors) && !empty($errors)) {
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <script type="text/javascript" charset="utf-8" src="js/login_win.js"></script>
+  <script type="text/javascript" charset="utf-8" src="login_win.js?v=42"></script>
+  <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
 </head>
 <body>
 	<div id="wrapper">
