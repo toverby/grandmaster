@@ -32,7 +32,7 @@
           if (isset($_SESSION['firstname'])) {
                 echo '<a href="logout.php">Logout</a>';
               } else {
-                echo '<a href= "javascript:popup("login.php?v=42")">Login</a>';
+                echo '<a onclick="javascript:popup("login.php")">Login</a>';
                 
               }
           ?></li>
