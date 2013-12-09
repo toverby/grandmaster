@@ -2,7 +2,7 @@
 	New Karate site project
 	-->
  <?php
-    ob_start()
+    //ob_start()
   ?> 
 <?php $page_title = 'Administration'; ?>
 
@@ -13,7 +13,7 @@
 <head>
   <title><?php echo $page_title; ?></title> 
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-  <script type="text/javascript" charset="utf-8" src="login_win.js?v=42"></script>
+
   <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> 
   
 </head>
